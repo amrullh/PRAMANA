@@ -1,0 +1,13 @@
+# tt_um_pramana_fpga.ys — sintesis wrapper TT, target Cyclone V
+# Pemakaian: yosys -s synth/tt_um_pramana_fpga.ys
+#
+# CATATAN WINDOWS: tahap ABC9 di synth_intel_alm gagal di Windows
+# (path temp, exit -2). Sintesis dijalankan sampai map_ffs; semua
+# keputusan pemetaan (DSP/ALM/FF) sudah selesai di titik itu.
+# Angka otoritatif tetap Quartus.
+
+read_verilog src/tt_um_pramana.v
+read_verilog src/mac_unit.v
+
+synth_intel_alm -family cyclonev -run begin:map_ffs -top tt_um_pramana
+stat

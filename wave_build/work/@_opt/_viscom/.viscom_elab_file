@@ -1,0 +1,1 @@
+C:/altera_standard/25.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 541104 work.tb_wave -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt -id 1-b81ea494c16b-6ac7a0a8-a-d09c

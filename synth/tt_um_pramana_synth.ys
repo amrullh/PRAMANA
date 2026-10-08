@@ -1,0 +1,19 @@
+# tt_um_pramana_synth.ys — sintesis generik wrapper Tiny Tapeout
+# Pemakaian: yosys -s synth/tt_um_pramana_synth.ys
+#
+# PENTING: angka di sini adalah GERBANG GENERIK (AND/OR/XOR/DFF),
+# BUKAN Logic Element FPGA. Jangan dilaporkan sebagai pemakaian FPGA.
+# Untuk angka FPGA, jalankan synth/tt_um_pramana_fpga.ys.
+
+read_verilog src/tt_um_pramana.v
+read_verilog src/mac_unit.v
+hierarchy -top tt_um_pramana
+
+proc
+opt
+memory
+opt
+techmap
+opt
+
+stat

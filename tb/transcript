@@ -1,0 +1,8 @@
+# ** Note: (vsim-220) 'C:/altera_standard/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -quiet -c -onfinish exit -pli "C:/Users/LENOVO/AppData/Local/Programs/Python/Python312/Lib/site-packages/cocotb/libs/cocotbvpi_modelsim.dll" top.mac_unit -do "run -all; quit" 
+# Start time: 21:17:38 on Oct 08,2026
+# ** Error (suppressible): (vsim-19) Failed to access library 'top' at "top".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 21:17:39 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

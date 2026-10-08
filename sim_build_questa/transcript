@@ -1,0 +1,100 @@
+# ** Note: (vsim-220) 'C:/altera_standard/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -quiet -c -onfinish exit -pli "C:/Users/LENOVO/AppData/Local/Programs/Python/Python312/Lib/site-packages/cocotb/libs/cocotbvpi_modelsim.dll" top.mac_unit -do "run -all; quit" 
+# Start time: 21:45:48 on Oct 08,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: 'C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\python312.dll'
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:234  in gpi_load_users                  Running entry func 'initialize' from loaded library 'C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\cocotb\simulator.cp312-win_amd64.pyd'
+#      -.--ns INFO     pygpi                              ..ib\pygpi\embed.cpp:115  in initialize                      Using Python 3.12.10 interpreter at C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\python.exe
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+#      -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: FLI support registered
+# run -all
+#      0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1791467154
+# 
+#      0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from C:\Users\LENOVO\AppData\Local\Programs\Python\Python312\Lib\site-packages\cocotb
+# 
+#      0.00ns INFO     cocotb.initialize                  Running on ModelSim for Questa Altera Starter FPGA Edition-64 version 2025.1 2025.05
+# 
+#      0.00ns INFO     cocotb.regression                  Running tests
+# 
+#      0.00ns INFO     cocotb.regression                  running test_mac.test_reset (1/6)
+# 
+#                                                             Setelah reset, akumulator harus 0.
+# 
+#     30.00ns INFO     cocotb.regression                  test_mac.test_reset passed
+# 
+#     30.00ns INFO     cocotb.regression                  running test_mac.test_accumulate_manual (2/6)
+# 
+#                                                             Uji sederhana dengan angka yang gampang dicek manual.
+# 
+#     90.00ns INFO     cocotb.regression                  test_mac.test_accumulate_manual passed
+# 
+#     90.00ns INFO     cocotb.regression                  running test_mac.test_enable_low_holds_value (3/6)
+# 
+#                                                             Kalau enable = 0, akumulator harus menahan nilai (tidak berubah).
+# 
+#    150.00ns INFO     cocotb.regression                  test_mac.test_enable_low_holds_value passed
+# 
+#    150.00ns INFO     cocotb.regression                  running test_mac.test_vs_golden_model (4/6)
+# 
+#                                                             Uji acak: bandingkan DUT vs golden model Python, bit-exact.
+# 
+#   5190.00ns INFO     cocotb.mac_unit                    500 vektor lolos — DUT bit-exact dengan golden model Python
+# 
+#   5190.00ns INFO     cocotb.regression                  test_mac.test_vs_golden_model passed
+# 
+#   5190.00ns INFO     cocotb.regression                  running test_mac.test_accumulator_needs_32bit (5/6)
+# 
+#                                                             Bukti NYATA bahwa akumulator butuh 32 bit.
+# 
+#   5250.00ns INFO     cocotb.mac_unit                    32768 > batas 16-bit (32767) -> akumulator 32-bit memang diperlukan
+# 
+#   5250.00ns INFO     cocotb.regression                  test_mac.test_accumulator_needs_32bit passed
+# 
+#   5250.00ns INFO     cocotb.regression                  running test_mac.test_negative_extremes (6/6)
+# 
+#                                                             Uji nilai ekstrem INT8: penanganan tanda (-128 x -128).
+# 
+#   5310.01ns INFO     cocotb.regression                  test_mac.test_negative_extremes passed
+# 
+#   5310.01ns INFO     cocotb.regression                  ***********************************************************************************************
+# 
+#                                                         ** TEST                                   STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+# 
+#                                                         ***********************************************************************************************
+# 
+#                                                         ** test_mac.test_reset                     PASS          30.00           0.03        967.74  **
+# 
+#                                                         ** test_mac.test_accumulate_manual         PASS          60.00           0.11        545.45  **
+# 
+#                                                         ** test_mac.test_enable_low_holds_value    PASS          60.00           0.00           inf  **
+# 
+#                                                         ** test_mac.test_vs_golden_model           PASS        5040.00           2.01       2501.24  **
+# 
+#                                                         ** test_mac.test_accumulator_needs_32bit   PASS          60.00           0.16        382.17  **
+# 
+#                                                         ** test_mac.test_negative_extremes         PASS          60.00           0.00           inf  **
+# 
+#                                                         ***********************************************************************************************
+# 
+#                                                         ** TESTS=6 PASS=6 FAIL=0 SKIP=0                        5310.01           2.53       2097.16  **
+# 
+#                                                         ***********************************************************************************************
+# 
+# ** Note: $finish
+#    Time: 5310005 ps  Iteration: 4  Instance: /mac_unit
+# End time: 21:46:02 on Oct 08,2026, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0

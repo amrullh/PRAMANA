@@ -1,0 +1,12 @@
+# Hasil build — bisa dibuat ulang kapan saja, JANGAN masuk Git
+sim_build/
+build/*.v
+build/*.txt
+tb/results.xml
+tb/__pycache__/
+__pycache__/
+.pytest_cache/
+
+# Waveform (besar, dihasilkan ulang)
+*.fst
+*.vcd

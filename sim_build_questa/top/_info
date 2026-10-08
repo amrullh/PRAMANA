@@ -1,0 +1,55 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/LENOVO/Documents/PERURI Chip Hackathon 2026/rtl-starter/sim_build_questa
+T_opt
+!i145 1
+!i144 0
+!s110 1791465738
+V:DkUU5lZc?5bKMaiD>b271
+04 8 4 work mac_unit fast 0
+=1-b81ea494c16b-6ac79908-339-f1c8
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U1 
+!s135 nogc
+o-quiet +acc -auto_acc_if_foreign -work top
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+R1
+vmac_unit
+2C:\Users\LENOVO\Documents\PERURI Chip Hackathon 2026\rtl-starter\src\mac_unit.v
+DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1791467146
+!i10b 1
+!s100 >;53IWPX``L<R]o5eXfNn3
+I:Df8lOL=41QMP1_@S8UKS2
+S1
+R1
+w1791441969
+8C:\Users\LENOVO\Documents\PERURI Chip Hackathon 2026\rtl-starter\src\mac_unit.v
+FC:\Users\LENOVO\Documents\PERURI Chip Hackathon 2026\rtl-starter\src\mac_unit.v
+!i122 2
+L0 12 27
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1791467145.000000
+!s107 C:\\Users\\LENOVO\\Documents\\PERURI Chip Hackathon 2026\\rtl-starter\\src\\mac_unit.v|
+!s90 -quiet|-work|top|-sv|C:\Users\LENOVO\Documents\PERURI Chip Hackathon 2026\rtl-starter\src\mac_unit.v|
+!i113 0
+o-quiet -work top -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0 defaultOptions 1085333592

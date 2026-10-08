@@ -1,0 +1,63 @@
+# Tiny Tapeout project information
+# PRAMANA — INT8 MAC accelerator untuk AI edge
+# PERURI Chip Hackathon 2026
+#
+# CATATAN: berkas ini DRAF untuk memetakan wrapper kita ke flow
+# Tiny Tapeout. Sebelum submit ke repo TT resmi, ganti `github`
+# dengan username GitHub yang sebenarnya — nama top module TT
+# wajib unik dan biasanya mengandung username tersebut.
+project:
+  title:        "PRAMANA — Serial INT8 MAC Unit"
+  author:       "Amrullah"
+  discord:      ""            # opsional, untuk komunikasi + role tapeout
+  description:  "Unit multiply-accumulate INT8 dengan protokol pin-hemat 24 pin untuk mini-accelerator ML di edge"
+  language:     "Verilog"
+  clock_hz:     50000000      # 50 MHz default Tiny Tapeout
+
+  # Ukuran tile. Satu tile ~167x108 um.
+  # Desain ini kecil (881 sel generik, 1 DSP block) -> 1x1 cukup.
+  tiles: "1x1"
+
+  # Top module wajib diawali "tt_um_" dan unik.
+  top_module:  "tt_um_pramana"
+
+  # Berkas sumber di ./src, satu per baris.
+  source_files:
+    - "tt_um_pramana.v"
+    - "mac_unit.v"
+
+# Pinout. Pin yang tidak dipakai dibiarkan kosong.
+# JANGAN menambah atau menghapus pin.
+pinout:
+  # Inputs — semua kontrol
+  ui[0]: "RESERVED (harus 0)"
+  ui[1]: "RESERVED (harus 0)"
+  ui[2]: "RESERVED (harus 0)"
+  ui[3]: "b_idx[0] — bit rendah indeks byte hasil"
+  ui[4]: "b_idx[1] — bit tinggi indeks byte hasil"
+  ui[5]: "commit — 1 = acc += a*b"
+  ui[6]: "ld_b — 1 = b <= uio_in"
+  ui[7]: "ld_a — 1 = a <= uio_in"
+
+  # Outputs — data hasil, byte per byte
+  uo[0]: "acc byte bit 0"
+  uo[1]: "acc byte bit 1"
+  uo[2]: "acc byte bit 2"
+  uo[3]: "acc byte bit 3"
+  uo[4]: "acc byte bit 4"
+  uo[5]: "acc byte bit 5"
+  uo[6]: "acc byte bit 6"
+  uo[7]: "acc byte bit 7"
+
+  # Bidirectional — dipakai sebagai DATA INPUT (oe = 0 semua)
+  uio[0]: "uio_in[0] — data operan bit 0"
+  uio[1]: "uio_in[1] — data operan bit 1"
+  uio[2]: "uio_in[2] — data operan bit 2"
+  uio[3]: "uio_in[3] — data operan bit 3"
+  uio[4]: "uio_in[4] — data operan bit 4"
+  uio[5]: "uio_in[5] — data operan bit 5"
+  uio[6]: "uio_in[6] — data operan bit 6"
+  uio[7]: "uio_in[7] — data operan bit 7"
+
+# Jangan diubah!
+yaml_version: 6

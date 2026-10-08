@@ -1,0 +1,17 @@
+# mac_unit_fpga.ys — sintesis mac_unit dengan target FPGA Intel/Altera
+# Pemakaian: yosys -s synth/mac_unit_fpga.ys
+# ------------------------------------------------------------
+# Tujuan: lihat bagaimana desain dipetakan ke primitif FPGA
+# (ALM / DSP / FF) — angka yang bisa dipertanggungjawabkan,
+# bukan sel generik yang tidak sebanding dengan Logic Element.
+#
+# CATATAN WINDOWS: tahap ABC9 di synth_intel_alm gagal di Windows
+# (path temp bermasalah, exit -2). Karena itu sintesis dijalankan
+# sampai label map_ffs — semua keputusan pemetaan (DSP, ALM, FF)
+# sudah selesai di tahap itu, jadi statistiknya sudah final untuk
+# keperluan pelaporan. Untuk angka otoritatif, jalankan Quartus.
+
+read_verilog src/mac_unit.v
+synth_intel_alm -family cyclonev -run begin:map_ffs
+
+stat

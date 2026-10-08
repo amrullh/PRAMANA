@@ -1,0 +1,30 @@
+# mac_unit.ys — sintesis generik Yosys untuk mac_unit
+# Pemakaian: yosys -s synth/mac_unit.ys
+# Hasil: netlist + jumlah sel generik
+#
+# PENTING: angka sel dari skrip ini adalah GERBANG GENERIK
+# (AND/OR/XOR/NOT/DFF). Angka ini TIDAK SEBANDING dengan Logic
+# Element FPGA dan TIDAK BOLEH dilaporkan sebagai pemakaian FPGA.
+# Gunakan sebagai indikator kompleksitas relatif saja.
+# Untuk angka FPGA, pakai synth/mac_unit_fpga.ys atau Quartus.
+
+read_verilog src/mac_unit.v
+hierarchy -top mac_unit
+
+# proses: ubah always-block jadi logika murni, lalu optimasi
+proc
+opt
+fsm
+opt
+memory
+opt
+
+# map ke library sel generik
+techmap
+opt
+
+# LAPORAN — jumlah gerbang generik (bukan LE!)
+stat
+
+# simpan netlist hasil sintesis
+write_verilog -noattr build/mac_unit_netlist.v
